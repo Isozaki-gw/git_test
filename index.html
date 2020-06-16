@@ -1,1 +1,536 @@
-Hello,World.
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>タイトル</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta property="og:title" content="タイトル">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://任意のURL">
+  <meta property="og:image" content="http://任意のURL/og_image.png">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="" />
+  <link rel="icon" href="../common/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="apple-touch-icon" href="../common/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="common/css/common.css">
+  <link rel="stylesheet" href="common/css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"><!-- ホバーで矢印が動くエフェクトに必要 -->
+  <script src="common/js/jquery.min.js"></script>
+
+  <script src="common/js/window_navigator.js"></script>
+  <script src="common/js/js_img_switch.js"></script>
+  <script src="common/js/window_size.js"></script>
+  <script src="common/js/plugin_switch.js"></script>
+  <!-- menu -->
+  <script src="common/js/dropdown_nav.js"></script>
+  <script src="common/js/hamburger_nav.js"></script>
+  <script src="common/js/scrollbar.js"></script>
+  <script src="common/js/scroll_top.js"></script>
+  <script src="common/js/scroll_top_stop.js"></script>
+
+  <script src="common/js/jquery.bxslider.min.js"></script>
+  <script src="common/js/facebook_resize.js"></script>
+  <script>
+  //bxslider
+  $(document).ready(function(){
+    //MV
+    $('.slider').bxSlider({
+      auto: true,
+      controls: false,
+      pager: false
+    });
+
+    //フェードイン
+    $('.slider01 ul').bxSlider({
+      auto: true,
+      controls: false,
+      pager: false,
+      mode: 'fade'
+    });
+
+    //カルーセル
+    $('.slider02 ul').bxSlider({
+        minSlides: 3,
+        maxSlides: 3,
+        moveSlides: 1,//1度でどれだけ動かすか
+        slideWidth: 320,//各スライドの幅を指定。初期値は0。
+        slideMargin: 10,//スライド間の余白
+        controls: false
+    });
+
+    //左右の矢印を別の場所に表示する
+    $('.slider03 ul').bxSlider({
+      pager: false,
+      prevSelector: '.custom-prev',
+      nextSelector: '.custom-next',
+      prevText: '前の画像を見る',
+      nextText: '次の画像を見る'
+    });
+
+    //サムネイルを表示する
+    $('.slider04 ul').bxSlider({
+      pagerCustom: '.custom-thumb',
+      mode: 'fade'
+    });
+
+    //ニュースティッカーモード
+    $('.slider05 ul').bxSlider({
+      ticker: true,
+      minSlides: 2,
+      maxSlides: 3,
+      slideWidth: 320,
+      slideMargin: 10,
+      tickerHover: true,
+      speed: 30000
+    });
+
+    //左右が見えるカルーセル
+    $('.slider06 ul').bxSlider({
+        minSlides: 3,
+        maxSlides: 3,
+        moveSlides: 1,//1度でどれだけ動かすか
+        slideWidth: 500,//各スライドの幅を指定。初期値は0。大きめに指定
+        slideMargin: 10,//スライド間の余白
+        controls: false
+    });
+
+  });
+  </script>
+</head>
+
+<body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4&appId=○○○○○○○";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="wrapper">
+
+    <!-- ↓↓　header ↓↓ -->
+    <!--#include virtual="/template/base01_beta/common/inc/header.inc" -->
+    <!-- ↑↑　header ↑↑ -->
+
+    <div id="contents">
+      <div id="mainvisual">
+        <ul class="slider">
+          <li><img src="img/mv_img_01.jpg" alt="main visual"></li>
+          <li><img src="img/mv_img_02.jpg" alt="main visual"></li>
+          <li><img src="img/mv_img_03.jpg" alt="main visual"></li>
+          <li><img src="img/mv_img_04.jpg" alt="main visual"></li>
+        </ul>
+      </div>
+      <!-- / #mainvisual -->
+
+      <!-- ↓↓ PC版ナビ ↓↓ -->
+      <!--#include virtual="/template/base01_beta/common/inc/menu.inc" -->
+      <!-- ↑↑ PC版ナビ ↑↑ -->
+
+      <div class="section">
+        <div class="inner">
+          <h1>これからWeb制作をするために勉強したいこと</h1>
+          <p class="zzz" style="font-size:30px;"></p>
+          <p>Webサイトを作成するには、どんな知識と技術が必要になるのでしょう？専門用語が多い<br>Web制作の現場では、言葉ひとつとっても初心者さんには分からないものが多いと思います。まずは Webサイトがどんなプログラム言語で記述されているのかを見てみましょう。</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="inner">
+          <h2 class="page_heading">使用される言語</h2>
+          <p>Webサイトは、主に以下のもので記述されています！</p>
+          <ul class="disc">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <div class="inner">
+          <h3>HTML</h3>
+          <p>HTML は Webサイトの骨格となる基本の部分。まずは HTML がなければはじまりません。Webサイトのコンテンツを「文章」として記述するための言語です。</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="inner">
+          <h3>CSS</h3>
+          <p>CSS は、HTML でマークアップされた Webサイトのデザインを整えるために記述します。Cascading Style Sheets の略で、スタイルシートと呼ばれるように、ページの「スタイル」（デザイン）を指定するために必要になります。</p>
+        </div>
+      </div>
+      <div class="section">
+        <div class="inner">
+          <h3>Javascript</h3>
+          <p>Javascript はブラウザ上で動くプログラム言語。主に HTML や CSS だけでは表現できないことを補う目的で使われます。学習が必須という訳ではありませんが、覚えておくと Webサイト上での表現に幅がでるので、ぜひ覚えたいプログラム言語のひとつです。</p>
+        </div>
+      </div>
+
+      <section class="jslinks section">
+        <div class="inner">
+          <h2 class="page_heading">各JSの名前と機能</h2>
+          <p>ブラウザで確認の際はテキストエンコードをUTF-8に変換してください。（日本語のコメントが表示されます）</p>
+          <ul>
+
+            <li>
+              <a href="common/js/window_navigator.js">
+                <div class="box">
+                  <h3>window_navigator.js</h3>
+                  <p class="txt">現在使っている環境をチェックするJS</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="common/js/js_img_switch.js">
+                <div class="box">
+                  <h3>js_img_switch.js</h3>
+                  <p class="txt">特定のクラス名をつけた画像に対し、ウィンドウサイズによって入れ替えるJS</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="common/js/scrollbar.js">
+                <div class="box">
+                  <h3>scrollbar.js</h3>
+                  <p class="txt">PCのとき、一定の高さを過ぎると追従するようになるJS</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="common/js/scroll_top.js">
+                <div class="box">
+                  <h3>scroll_top.js</h3>
+                  <p class="txt">スクロールトップのJS</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="common/js/window_size.js">
+                <div class="box">
+                  <h3>window_size.js</h3>
+                  <p class="txt">ウィンドウサイズによってbodyにつけるクラス名を変更するJS</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="common/js/dropdown_nav.js">
+                <div class="box">
+                  <h3>dropdown_nav.js</h3>
+                  <p class="txt">ドロップダウンのJS、ホバーで動作</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="common/js/hamburger_nav.js">
+                <div class="box">
+                  <h3>hamburger_nav.js</h3>
+                  <p class="txt">ハンバーガーメニューのJS、出ているとき背景固定</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="common/js/scroll_top_stop.js">
+                <div class="box">
+                  <h3>scroll_top_stop.js</h3>
+                  <p class="txt">スクロールトップがfooterの上あたりなどで止まるJS</p>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="common/js/plugin_switch.js">
+                <div class="box">
+                  <h3>plugin_switch.js</h3>
+                  <p class="txt">プラグインの動作スイッチ</p>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+      <!-- / .links -->
+      
+      <section class="links section">
+        <div class="inner">
+          <h2 class="page_heading">ページ毎の実装js目次</h2>
+          <ul>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/" target="_blank">トップ</a></h3>
+              <p>google検索窓 / スライダー / ホバーアニメ / movie / facebook(レスポンシブ) / Twitter</p>
+            </li>
+            <li>
+              <h3><a class="hover" href="http://coding.contenna.org/template/base01/news/" target="_blank">ニュース一覧</a></h3>
+              <p>もっと見るjson実装</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/news/detail/01.html" target="_blank">ニュース詳細</a><a class="hover"  href="http://coding.contenna.org/template/base01/products/" target="_blank">商品一覧</a></h3>
+              <p>サイドバー左</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/products/detail/" target="_blank">商品詳細</a></h3>
+              <p>サイドバー左 / モーダル</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/about/" target="_blank">会社概要</a></h3>
+              <p>&lt;table&gt;テーブル / &lt;dl&gt;テーブル / googleマップ</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/about/president.html" target="_blank">社長あいさつ</a></h3>
+              <p>tab切り替え / フロートエリア</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/form/" target="_blank">フォーム</a></h3>
+              <p>formパーツ / checked状態を取得するJS</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/faq/" target="_blank">Q&amp;A</a></h3>
+              <p>アコーディオン</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/shop/" target="_blank">店舗情報</a></h3>
+              <p>googleマップ</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/sitemap/" target="_blank">サイトマップ</a></h3>
+              <p>文字サイズの切り替え</p>
+            </li>
+            <li>
+              <h3><a class="hover"  href="http://coding.contenna.org/template/base01/privacy/" target="_blank">プライバシーポリシー</a></h3>
+              <p>カスタムスクロール</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- / .links .section -->
+      
+      <section class="search section">
+        <div class="inner cf">
+          <h2 class="page_heading">検索エリア</h2>
+          <p>Google検索とyahoo検索がありますが、yahoo検索は非レスポンシブです。</p>
+          <p>Googleカスタム検索（<a href="https://cse.google.co.jp/cse/all" target="_blank">https://cse.google.co.jp/cse/all</a>）<span>※登録必須</span></p>
+          <h3>手順</h3>
+          <ol class="decimal">
+            <li>設定：検索するサイト に、検索窓で検索した際結果として表示するページのURLを指定。（サンプルはコンテナサイトを指定してます。）<br><span>※検索する先にベーシック認証がかかってると検索結果は出ません。</span></li>
+            <li>デザイン：検索時に結果をどのように表示するか選択してください。別ページ表示の場合は2ページを選択</li>
+            <li>テーマ：検索結果のカラー設定ができます、隣タブ「カスタマイズ」でもっと細かく指定できます。</li>
+            <li>上記指定が完成したら、「設定」→「コード取得」よりコードを取得<br>※デザインにて2ページを選択した場合は、「次へ：検索結果コードの取得」より、検索結果表示ページに張り付けるコードと、「検索結果の詳細」から、検索結果を表示するURLを指定してください。</li>
+            <li>デフォルトのカスタム検索ボックスが生成されますので、案件に合わせてレイアウトを変更してください。<br>変更は開発ツールからClass等を調べながら行ってください。</li>
+          </ol>
+          <h3>サンプル</h3>
+          <script>
+            (function() {
+              var cx = '017142376762756856846:zminlnbbwjc';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <!-- searchbox-onlyに検索窓が表示されます。 -->
+          <div class="search_wrap">
+            <gcse:searchbox-only></gcse:searchbox-only>
+          </div>
+          <p>検索結果はresult.htmlに表示されます。</p>
+        </div>
+        <!-- inner -->
+      </section>
+
+      <section class="slider_sample">
+      <div class="inner cf">
+        <h2 class="page_heading">スライダーパターン</h2>
+        <p>参考URL：jquery.bxslider.jsを使ったサンプルいろいろ<br><a href="http://cly7796.net/wp/javascript/examples-that-use-the-jquery-bxslider/" target="_blank">http://cly7796.net/wp/javascript/examples-that-use-the-jquery-bxslider/</a></p>
+        <div class="slider01 slidewrap">
+          <h3>フェード</h3>
+          <ul>
+            <li><img src="img/mv_img_01.jpg" alt=""></li>
+            <li><img src="img/mv_img_02.jpg" alt=""></li>
+            <li><img src="img/mv_img_03.jpg" alt=""></li>
+            <li><img src="img/mv_img_04.jpg" alt=""></li>
+          </ul>
+        </div>
+        <div class="slider02 slidewrap">
+          <h3>カルーセル</h3>
+          <ul>
+            <li><img src="img/mv_img_01.jpg" alt=""></li>
+            <li><img src="img/mv_img_02.jpg" alt=""></li>
+            <li><img src="img/mv_img_03.jpg" alt=""></li>
+            <li><img src="img/mv_img_04.jpg" alt=""></li>
+          </ul>
+        </div>
+        <div class="slider03 slidewrap">
+          <h3>左右の矢印を別の場所に表示する</h3>
+          <ul>
+            <li><img src="img/mv_img_01.jpg" alt=""></li>
+            <li><img src="img/mv_img_02.jpg" alt=""></li>
+            <li><img src="img/mv_img_03.jpg" alt=""></li>
+            <li><img src="img/mv_img_04.jpg" alt=""></li>
+          </ul>
+          <div class="custom-control">
+            <div class="custom-prev"></div>
+            <div class="custom-next"></div>
+          </div>
+        </div>
+        <div class="slider04 slidewrap">
+          <h3>サムネイルを表示する</h3>
+          <ul>
+            <li><img src="img/mv_img_01.jpg" alt=""></li>
+            <li><img src="img/mv_img_02.jpg" alt=""></li>
+            <li><img src="img/mv_img_03.jpg" alt=""></li>
+            <li><img src="img/mv_img_04.jpg" alt=""></li>
+          </ul>
+          <div class="custom-thumb cf">
+            <a data-slide-index="0" href="#"><img src="img/mv_img_01.jpg" width="160" height="100" /></a>
+            <a data-slide-index="1" href="#"><img src="img/mv_img_02.jpg" width="160" height="100" /></a>
+            <a data-slide-index="2" href="#"><img src="img/mv_img_03.jpg" width="160" height="100" /></a>
+            <a data-slide-index="3" href="#"><img src="img/mv_img_04.jpg" width="160" height="100" /></a>
+          </div>
+        </div>
+        <div class="slider05 slidewrap">
+          <h3>ニュースティッカーモード</h3>
+          <ul>
+            <li><img src="img/mv_img_01.jpg" alt=""></li>
+            <li><img src="img/mv_img_02.jpg" alt=""></li>
+            <li><img src="img/mv_img_03.jpg" alt=""></li>
+            <li><img src="img/mv_img_04.jpg" alt=""></li>
+          </ul>
+        </div>
+        <div class="slider06 slidewrap">
+          <h3>ごり押し左右が見えるカルーセル</h3>
+          <div class="sliderwrap">
+            <div class="sliderinner">
+              <ul>
+                <li><img src="img/mv_img_01.jpg" alt=""></li>
+                <li><img src="img/mv_img_02.jpg" alt=""></li>
+                <li><img src="img/mv_img_03.jpg" alt=""></li>
+                <li><img src="img/mv_img_04.jpg" alt=""></li>
+              </ul>
+            </div>
+            <!-- / .sliderinner -->
+          </div>
+          <!-- / .sliderwrap -->
+          <p>上記レイアウトのカルーセル作成時はslickのプラグインも調整が効きやすいです。</p>
+          <p>実装サンプル：billboard&nbsp;（<a href="http://www.billboard-japan.com/" target="_blank">http://www.billboard-japan.com/</a>）</p>
+        </div>
+      </div>
+    </section>
+    <!-- / .slider_sample -->
+
+    <section class="hover_button_sample">
+      <div class="inner cf">
+        <h2 class="page_heading">ホバーで拡大</h2>
+        <div class="scale">
+          <img src="img/css_scale.jpg">
+        </div>
+        <h2 class="page_heading">ホバーで矢印が動く</h2>
+        <div class="arrow-btn">
+          <a href="">
+            <p class="txt">Button</p>
+            <div class="arrow hi-icon-effect-01">
+              <p class="hi-icon hi-icon-01">arrow</p>
+            </div>
+          </a>
+        </div>
+        <h2 class="page_heading">ホバーボタンパターン</h2>
+        <div class="sample-area sample01">
+          <p>サンプル1</p>
+          <a class="button" href="#">Button</a>
+        </div>
+
+        <div class="sample-area sample02">
+          <p>サンプル2</p>
+          <a class="button" href="#">Button</a>
+        </div>
+
+        <div class="sample-area sample03">
+          <p>サンプル3</p>
+          <a class="button" href="#">Button</a>
+        </div>
+
+        <div class="sample-area sample04">
+          <p>サンプル4</p>
+          <a class="button" href="#">Button</a>
+        </div>
+
+        <div class="sample-area sample05">
+          <p>サンプル5</p>
+          <a class="button" href="#">Button</a>
+        </div>
+
+        <div class="sample-area sample06">
+          <p>サンプル6</p>
+          <a class="button" href="#">Button</a>
+        </div>
+
+        <div class="sample-area sample07">
+          <p>サンプル7</p>
+          <a class="button" href="#">Button</a>
+        </div>
+      </div>
+    </section>
+    <!-- / .hover_button_sample -->
+
+      <div class="movie section">
+        <div class="inner">
+
+          <h2 class="page_heading">YouTube</h2>
+
+          <div class="youtubeBox section">
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/5LI1PysAlkU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <div class="videoBox">
+            <h2 class="page_heading">HTML5</h2>
+            <p><video src="img/sample.mp4" muted controls>代替コンテンツ。</video></p>
+          </div>
+
+        </div>
+      </div>
+      <div id="social_box" class="cf">
+        <div class="inner">
+          <h2 class="page_heading">facebook / Twitter</h2>
+        </div>
+        <div class="inner">
+          <div id="social_box_fb" class="under_box">
+            <div class="facebook_area"  id="pagePlugin">
+              <div class="pc_obj"><div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="500" data-height="560" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>
+              <div class="sp_obj"><div class="fb-page" data-href="https://www.facebook.com/facebook" data-width="500" data-hide-cover="false" data-show-facepile="false" data-show-posts="false"></div></div>
+            </div>
+            <!-- / .facebook_area -->
+          </div>
+          <div id="social_box_tw" class="under_box">
+            <div><a class="twitter-timeline" href="https://twitter.com/googlejapan?ref_src=twsrc%5Etfw">Tweets by googlejapan</a></div>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="google-maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3281.03387955648!2d135.50159131552763!3d34.67909439188212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1510215457184" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <!-- ↓↓ footer ↓↓ -->
+    <!--#include virtual="/template/base01_beta/common/inc/footer.inc" -->
+    <!-- ↑↑ footer ↑↑ -->
+
+  </div>
+
+  <div id="pagetop">
+    <span class="arrow"></span>
+  </div>
+</body>
+</html>
